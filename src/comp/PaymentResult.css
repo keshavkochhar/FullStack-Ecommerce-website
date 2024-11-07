@@ -1,0 +1,91 @@
+/* Container for payment result with smooth animation */
+.payment-result-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Heading styles for success or failure messages */
+  .payment-result-container h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Success message styles */
+  .payment-success {
+    color: #28a745; /* Green color for success */
+    animation: slideInFromTop 1s ease-out;
+  }
+  
+  /* Failure message styles */
+  .payment-failure {
+    color: #dc3545; /* Red color for failure */
+    animation: slideInFromTop 1s ease-out;
+  }
+  
+  /* Payment method text */
+  .payment-result-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+  
+  /* Button styles */
+  .payment-result-button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Green color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+  }
+  
+  /* Button hover effect */
+  .payment-result-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Button focus effect */
+  .payment-result-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Subtle green glow on focus */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Slide-in animation for success/failure messages */
+  @keyframes slideInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
